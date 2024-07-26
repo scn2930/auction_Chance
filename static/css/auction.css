@@ -1,0 +1,15 @@
+/* page: auction */
+#auction {
+    width: 100%;
+    /* height수정예정, bgc없앨거임 */
+    height: 800px;
+    background-color: beige;
+}
+
+/* 반응형 분기점 */
+/* 480이하일 경우 */
+@media (max-width: 480px) {}
+/* 768이하일 경우 */
+@media (max-width: 768px) {}
+/* 769이상일 경우 */
+@media (min-width: 769px) {}
