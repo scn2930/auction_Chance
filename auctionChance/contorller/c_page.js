@@ -10,10 +10,9 @@ exports.auction = (req,res) => {
 exports.auctiondetail = (req,res) => {
     res.render('auctiondetail');
 }
-
-
-
-// 최재혁
+exports.profile = (req,res) => {
+    res.render('profile');
+}
 exports.secondhand = (req, res) => {
     res.render('secondhand');
 };
