@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 * {
     margin: 0;
     padding: 0;
@@ -7,44 +8,52 @@
     box-sizing: border-box;
 }
 
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
 /* 공통 css */
-body {
-    font-size: 1rem;
-    /* 기본 폰트 크기, 16px */
-    display: flex;
-    flex-direction: column;
-    min-height: 100px;
+/* body {font-size: 1rem; /* 기본 폰트 크기, 16px */
+#wrap {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 100px;
+    /* bgc없앨거임 */
+    background-color: rgb(255, 255, 255, 0.5);
 }
-
+.inner {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    /* bgc없앨거임 */
+    background-color: rgb(255, 255, 255, 0.5);
+}
+footer {
+    width: 100%;
+}
 @media (max-width: 480px) {
     body {
-        font-size: 0.875rem;
-        /* 14px */
+        font-size: 0.875rem; /* 14px */
+
     }
 
     h1 {
-        font-size: 1.5rem;
-        /* 24px */
+
+        font-size: 1.5rem; /* 24px */
     }
 
     h2 {
-        font-size: 1.25rem;
-        /* 20px */
+        font-size: 1.25rem; /* 20px */
     }
 
     h3 {
-        font-size: 1.125rem;
-        /* 18px */
+        font-size: 1.125rem; /* 18px */
     }
 
     p {
-        font-size: 0.875rem;
-        /* 14px */
+        font-size: 0.875rem; /* 14px */
     }
 }
 
@@ -102,91 +111,378 @@ body {
     }
 }
 
+
+/* 공통 style.css로 옮기기  */
+i {
+    cursor: pointer;
+}
 header {
+    background-color: white;
     width: 100%;
     height: 100px;
     position: fixed;
     top: 0;
     left: 0;
-        /* background-color: #31572C; */
-}
 
-header>.inner>#logo img {
-    width: 100px;
-    border-radius: 20px;
+    border-bottom: 1px solid rgb(29, 29, 29);
 }
-
-#wrap {
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 100px;
-    /* bgc없앨거임 */
-    background-color: rgb(255, 255, 255, 0.5);
-    height: auto;
-    min-height: 100%;
-    padding-bottom: 150px;
-}
-
-.inner {
-    width: 95%;
+#logo {
     height: 100%;
-    margin: 0 auto;
-    /* bgc없앨거임 */
-    background-color: rgb(255, 255, 255, 0.5);
+    width: 20%;
+    display: flex;
+    align-items: center;
 }
-
-footer {
-    /* width: 100%;
-    height: 150px;
-    background-color: #31572C; */
-    /* width: 100%;
-    height: 150px;
-    position : relative;
-    transform : translateY(-100%);
-    border-top: 1px solid #ccc;
-
+#logo > a {
+    display: inline-block;
+}
+header > .inner {
+    display: flex;
+    align-items: center;
+}
+header > .inner > div {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.header-top {
+    height: 30px;
+    font-size: 0.9rem;
+}
+.header-top > ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-top > ul > li:first-child {
+    margin-right: 10px;
+}
+.header-top > ul > li {
+    cursor: pointer;
+}
+.header-bottom {
+    height: 70px;
+    display: flex;
+}
+.header-bottom > nav {
+    width: 80%;
+}
+.header-bottom > nav > ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header-bottom > nav > ul > li > a {
+    padding: 20px;
+}
+.mobile-header {
+    display: none;
+}
+.footer-top {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+}
+.footer-top > ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.footer-top > ul > li {
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+.footer-bottom {
+    text-align: center;
+}
+.footer-bottom .company li {
+    line-height: 1.4;
+}
+.footer-bottom > .callcenter {
+    padding: 10px;
+    margin: 20px auto;
+    background-color: rgb(0, 66, 0);
+    width: 30%;
+    border-radius: 15px;
+    color: white;
+}
+.footer-bottom > .callcenter > li:first-child {
+    font-size: 1.5rem;
+}
+.footer-bottom > .sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-bottom > .sns > li {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(0, 66, 0);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    */
-    /* background-color: #31572C; */
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:30px;
-    width:100%;
-    background:#999;
+    margin: 10px;
+}
+.footer-bottom > .sns > li > i {
+    font-size: 1.2rem;
+}
+.footer-bottom > ul > li {
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+    header > .inner {
+        justify-content: space-between;
+    }
+    #logo {
+        height: 60px;
+    }
+    #logo img {
+        height: 50px;
+    }
+    .header-top {
+        display: none;
+    }
+    .header-bottom {
+        display: none;
+    }
+    .mobile-header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .mobile-header > .nav-icon > i {
+        font-size: 1.3rem;
+        color: rgb(40, 40, 40);
+    }
+    .mobile-header > .nav-icon > i:first-child {
+        margin-right: 10px;
+    }
+    .mobile-header > nav {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(0, 66, 0);
+        z-index: 100;
+        color: white;
+        padding: 20px;
+        transition: 0.5s;
+    }
+    .mobile-header > nav > div {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .mobile-header > nav > div > i {
+        font-size: 1.3rem;
+    }
+    .mobile-header > nav > ul > li {
+        border-bottom: 1px solid white;
+    }
+    .mobile-header > nav > ul > li > a {
+        padding: 20px;
+        display: inline-block;
+    }
+    .footer-top > ul > li {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    .footer-bottom .company li {
+        font-size: 0.8rem;
+    }
+    .footer-bottom .callcenter li {
+        font-size: 0.8rem;
+    }
 }
 
-#search {
+/* fixicon  */
+.fix-icon {
+    position: fixed;
+    bottom: 5%;
+    right: 10px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.fix-icon i {
+    color: rgb(0, 66, 0);
+}
+
+
+/* chat modal */
+.chat {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 20px;
+    background-color: rgb(222, 222, 222);
+    /* display: none; */
+}
+.chat-top {
+    height: 100px;
+    border-bottom: 1px solid gray;
+}
+.chat-top .former-btn {
+    margin-bottom: 10px;
+}
+.chat-top .chat-member {
+    display: flex;
+    align-items: center;
+}
+.chat-body {
+    height: calc(100% - 220px);
+    overflow: scroll;
+}
+.chat-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 110px;
     width: 100%;
-    /* height수정예정, bgc없앨거임 */
+    background-color: white;
+    border-radius: 10px;
+}
+.chat-input i {
+    color: rgb(66, 66, 66);
+    font-size: 1.3rem;
+    padding: 5px;
+}
+.chat-input textarea {
+    height: 60%;
+}
+.chat-input > div {
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.chat-input > div > div {
+    display: flex;
+}
+.area {
+    border-radius: 10px 10px;
+    overflow: scroll;
+    width: 100%;
+    border: 0;
+    resize: none;
+    text-align: left;
+}
+#file {
+    display: none;
+}
+.send-btn {
+    border: 0;
+    background-color: inherit;
+}
+@media (max-width: 480px) {
+    .chat {
+        width: 100%;
+    }
+    .chat-input i {
+        font-size: 1.3rem;
+    }
+}
+.chat-view {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 20px;
+    height: 100%;
+    /* display: none; */
+    background-color: lightgray;
+    transition: 0.5s;
+}
+.chat-view i {
+    font-size: 1.3rem;
+}
+.close-btn {
+    font-size: 1.5rem;
+}
+.chat-view h4 {
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+.chat-room {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+    width: 100%;
+}
+.user-img {
+    width: 50px;
     height: 50px;
-    /* background-color: cadetblue; */
+    margin-right: 20px;
+}
+.user-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.chat-room .chat-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chat-room > p {
+    font-size: 0.8rem;
+}
+.chat-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.chat-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+.chat-check p {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(212, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+}
+/* chat modal 반응형 */
+@media (max-width: 480px) {
+    .chat-view {
+        width: 100%;
+    }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+    .chat-view {
+        width: 100%;
+    }
+    .chat {
+        width: 100%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .chat-view {
+        width: 60%;
+    }
+    .chat {
+        width: 60%;
+    }
+}
+@media (min-width: 1025px) {
+    .chat-view {
+        width: 50%;
+    }
+    .chat {
+        width: 50%;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* 공통css빼고 css파일을 따로 만들건지? */
-
-
-/* 반응형 분기점 */
-/* 480이하일 경우 */
-@media (max-width: 480px) {}
-
-/* 768이하일 경우 */
-@media (max-width: 768px) {}
-
-/* 769이상일 경우 */
-@media (min-width: 769px) {}
