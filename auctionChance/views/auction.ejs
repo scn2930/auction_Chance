@@ -24,21 +24,21 @@
                     <div class="header-bottom">
                         <nav>
                             <ul>
-                                <li><a href="">경매상품</a></li>
-                                <li><a href="">중고상품</a></li>
+                                <li><a href="/auction">경매상품</a></li>
+                                <li><a href="/secondhand">중고상품</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="mobile-header">
                         <div class="nav-icon">
                             <i class="fa-solid fa-user"></i>
-                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars" onclick="navOpen()"></i>
                         </div>
                         <nav>
-                            <div><i class="fa-solid fa-xmark close-btn"></i></div>
+                            <div><i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i></div>
                             <ul>
-                                <li><a href="">경매상품</a></li>
-                                <li><a href="">중고상품</a></li>
+                                <li><a href="/auction">경매상품</a></li>
+                                <li><a href="/secondhand">중고상품</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -47,6 +47,18 @@
         </header>
         <div id="wrap">
             <div id="search">검색창</div>
+            <div class="auction-category">
+                <ul>
+                    <li>디지털 기기</li>
+                    <li>가구 / 인테리어</li>
+                    <li>패션 / 잡화</li>
+                    <li>생활 가전</li>
+                    <li>스포츠 / 게임</li>
+                    <li>식품</li>
+                    <li>상품권</li>
+                    <li>잡화</li>
+                </ul>
+            </div>
             <div id="auction">
                 <div>
                     <div class="auction-img">
@@ -134,125 +146,96 @@
                         <li>0000-0000</li>
                     </ul>
                     <ul class="sns">
-                        <li><i class="fa-brands fa-instagram"></i></li>
-                        <li><i class="fa-brands fa-twitter"></i></li>
-                        <li><i class="fa-brands fa-youtube"></i></li>
-                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></i></li>
+                        <li><a href="https://x.com/?lang=ko" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                     </ul>
                 </div>
             </div>
         </footer>
         <div class="fix-icon chat-icon"><i class="fa-solid fa-comment"></i></div>
-        <div class="chat-view">
-            <div><i class="fa-solid fa-xmark close-btn"></i></div>
-            <h4>채팅</h4>
-            <div class="chat-room">
-                <div class="user-img">
-                    <img src="/image/test2.jpg" alt="">
-                </div>
-                <div class="chat-main">
-                    <div class="chat-text">
-                        <div class="user-name">
-                            <p>user1</p>
-                        </div>
-                        <div class="message">
-                            <p>아ㅏㅏㅏ아아아ㅏ아아아아아</p>
-                        </div>
-                    </div>
-                    <div class="chat-info">
-                        <div class="chat-date">
-                            <p>오전 1:25</p>
-                        </div>
-                        <div class="chat-check">
-                            <p>1</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="chat-room">
-                <div class="user-img">
-                    <img src="/image/test2.jpg" alt="">
-                </div>
-                <div class="chat-main">
-                    <div class="chat-text">
-                        <div class="user-name">
-                            <p>user2</p>
-                        </div>
-                        <div class="message">
-                            <p>아ㅏㅏㅏ아아아ㅏ아아아아아</p>
-                        </div>
-                    </div>
-                    <div class="chat-info">
-                        <div class="chat-date">
-                            <p>오전 1:25</p>
-                        </div>
-                        <div class="chat-check">
-                            <p>1</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="chat">
-            <div class="chat-top">
-                <div class="former-btn"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="chat-member">
+        <div class="modal-bg"></div>
+            <div class="chat-view">
+                <div><i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i></div>
+                <h4>채팅</h4>
+                <div class="chat-room">
                     <div class="user-img">
                         <img src="/image/test2.jpg" alt="">
                     </div>
-                    <div class="user-name">
-                        <p>user1</p>
-                    </div>
-                </div>
-            </div>
-            <div class="chat-body">
-
-            </div>
-            <form class="chat-input">
-                <textarea  class="area">
-                </textarea>
-                <div>
-                    <div>
-                        <label for="file">
-                            <i class="fa-regular fa-file-image"><input type="file" id="file"></i>
-                        </label>
-                        <div class="emoticon">
-                            <i class="fa-regular fa-face-smile"></i>
+                    <div class="chat-main">
+                        <div class="chat-text">
+                            <div class="user-name">
+                                <p>user1</p>
+                            </div>
+                            <div class="message">
+                                <p>아ㅏㅏㅏ아아아ㅏ아아아아아</p>
+                            </div>
+                        </div>
+                        <div class="chat-info">
+                            <div class="chat-date">
+                                <p>오전 1:25</p>
+                            </div>
+                            <div class="chat-check">
+                                <p>1</p>
+                            </div>
                         </div>
                     </div>
-                    <button class="send-btn"><i class="fa-regular fa-paper-plane"></i></button>
                 </div>
-                
-            </form>
-        </div>
-        <script>
-            const chat = document.querySelector('.chat')
-            const chatView = document.querySelector('.chat-view')
-            const chatIcon = document.querySelector('.chat-icon')
-            const closeBtn = document.querySelectorAll('.close-btn')
-            const chatViewClose = document.querySelector('.chat-view .close-btn')
-            const mobileNavClose = document.querySelector('.mobile-header>nav .close-btn')
-            const formerBtn = document.querySelector('.former-btn')
-            const mobileNavBtn = document.querySelector('.nav-icon>.fa-bars')
-            const mobileNav = document.querySelector('.mobile-header>nav')
-            chatIcon.addEventListener('click', () => {
-                chatView.style.right = "0"
-                chat.style.right = "0"
-            });
-            chatViewClose.addEventListener('click',() => {
-                chatView.style.right='-100%'
-                chat.style.right='-100%'
-            })
-            mobileNavClose.addEventListener('click',() => {
-                mobileNav.style.right='-100%';
-            })
-            formerBtn.addEventListener('click',() => {
-                chat.style.right='-100%'
-                chatView.style.right='0'
-            })
-            mobileNavBtn.addEventListener('click',() => {
-                mobileNav.style.right='0';
-            })
-        </script>
+                <div class="chat-room">
+                    <div class="user-img">
+                        <img src="/image/test2.jpg" alt="">
+                    </div>
+                    <div class="chat-main">
+                        <div class="chat-text">
+                            <div class="user-name">
+                                <p>user2</p>
+                            </div>
+                            <div class="message">
+                                <p>아ㅏㅏㅏ아아아ㅏ아아아아아</p>
+                            </div>
+                        </div>
+                        <div class="chat-info">
+                            <div class="chat-date">
+                                <p>오전 1:25</p>
+                            </div>
+                            <div class="chat-check">
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-top">
+                    <div class="former-btn"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="chat-member">
+                        <div class="user-img">
+                            <img src="/image/test2.jpg" alt="">
+                        </div>
+                        <div class="user-name">
+                            <p>user1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-body">
+                </div>
+                <form class="chat-input">
+                    <textarea  class="area">
+                    </textarea>
+                    <div>
+                        <div>
+                            <label for="file">
+                                <i class="fa-regular fa-file-image"><input type="file" id="file"></i>
+                            </label>
+                            <div class="emoticon">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                        <button class="send-btn"><i class="fa-regular fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        <script src="/js/script.js"></script>
     </body>
 </html>

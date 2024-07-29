@@ -3,15 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/auctiondetail.css" />
         <script src="https://kit.fontawesome.com/1b7922c83d.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        
+        <link rel="stylesheet" href="/css/style.css" />
         <title>Document</title>
     </head>
     <body>
+        <!-- 헤더,푸터,채팅 (공통적인 부분 수정본 빼놓음 각자 ejs파일에 가져가세요!!!!!) -->
         <header>
             <div class="inner">
                 <h1 id="logo">
@@ -27,8 +24,8 @@
                     <div class="header-bottom">
                         <nav>
                             <ul>
-                                <li><a href="">경매상품</a></li>
-                                <li><a href="">중고상품</a></li>
+                                <li><a href="/auction">경매상품</a></li>
+                                <li><a href="/secondhand">중고상품</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -40,72 +37,14 @@
                         <nav>
                             <div><i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i></div>
                             <ul>
-                                <li><a href="">경매상품</a></li>
-                                <li><a href="">중고상품</a></li>
+                                <li><a href="/auction">경매상품</a></li>
+                                <li><a href="/secondhand">중고상품</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
         </header>
-        <div id="wrap">
-            <div id="auction-detail">
-                <div class="detail-bg"></div>
-                <div class="detail-inner">
-                    <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide auction-img">
-                                <a href=""><img src="/image/test.jpg" alt="" /></a>
-                            </div>
-                            <div class="swiper-slide auction-img">
-                                <a href=""><img src="/image/test.jpg" alt="" /></a>
-                            </div>
-                            <div class="swiper-slide auction-img">
-                                <a href=""><img src="/image/test.jpg" alt="" /></a>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="auction-user">
-                        <div class="user-img">
-                            <a href="#"
-                                ><img src="/image/test2.jpg" alt=""
-                            /></a>
-                        </div>
-                        <div class="user-name">user사진,닉네임 불러오기</div>
-                    </div>
-                    <div class="auction-text">
-                        <div>
-                            <h4>상품명</h4>
-                            <p>Lorem ipsum, dolor si</p>
-                        </div>
-                        <div>
-                            <h4>시작가</h4>
-                            <p>100,000~</p>
-                        </div>
-                        <div>
-                            <h4>기간</h4>
-                            <p>07.28 ~ 08.02</p>
-                        </div>
-                        <div>
-                            <h4>상품설명</h4>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Doloremque ipsa quam, esse,
-                                hic quas eaque a facere accusamus, fugiat
-                                dolorum voluptates eos ea id ex! Cum dolore
-                                nostrum aut odit?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="btn-box">
-                        <button class="chat-btn" onclick="chatFunc()">입찰하기</button>
-                        <button class="chat-btn" onclick="chatFunc()">1:1문의</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <footer>
             <div class="inner">
                 <div class="footer-top">
@@ -130,10 +69,10 @@
                         <li>0000-0000</li>
                     </ul>
                     <ul class="sns">
-                        <li><i class="fa-brands fa-instagram"></i></li>
-                        <li><i class="fa-brands fa-twitter"></i></li>
-                        <li><i class="fa-brands fa-youtube"></i></li>
-                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></i></li>
+                        <li><a href="https://x.com/?lang=ko" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -141,7 +80,7 @@
         <div class="fix-icon chat-icon"><i class="fa-solid fa-comment"></i></div>
         <div class="modal-bg"></div>
             <div class="chat-view">
-                <i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i>
+                <div><i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i></div>
                 <h4>채팅</h4>
                 <div class="chat-room">
                     <div class="user-img">
@@ -192,7 +131,7 @@
             </div>
             <div class="chat">
                 <div class="chat-top">
-                    <div class="former-btn" onclick="closeBtn()"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="former-btn"><i class="fa-solid fa-chevron-left"></i></div>
                     <div class="chat-member">
                         <div class="user-img">
                             <img src="/image/test2.jpg" alt="">
@@ -203,7 +142,6 @@
                     </div>
                 </div>
                 <div class="chat-body">
-    
                 </div>
                 <form class="chat-input">
                     <textarea  class="area">
@@ -221,7 +159,6 @@
                     </div>
                 </form>
             </div>
-        <script src="/js/auctiondetail.js"></script>
         <script src="/js/script.js"></script>
     </body>
 </html>
