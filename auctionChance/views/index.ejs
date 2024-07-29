@@ -2,140 +2,219 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/1b7922c83d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 
 <body>
-
     <header>
         <div class="inner">
-            <div id="logo">
-                <a href="/"><img src="/image/logo.png" alt="logoImg"></a>
+            <h1 id="logo">
+                <a href="/"><img src="/image/logo.png" alt=""></a>
+            </h1>
+            <div>
+                <div class="header-top">
+                    <ul>
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                    </ul>
+                </div>
+                <div class="header-bottom">
+                    <nav>
+                        <ul>
+                            <li><a href="">경매상품</a></li>
+                            <li><a href="">중고상품</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="mobile-header">
+                    <div class="nav-icon">
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <nav>
+                        <div><i class="fa-solid fa-xmark close-btn"></i></div>
+                        <ul>
+                            <li><a href="">경매상품</a></li>
+                            <li><a href="">중고상품</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <nav>
-
-            </nav>
         </div>
     </header>
 
-    <main class="main-page">
-        <div id="wrap">
-
-            <div id="search">
-                <div class="search-box">
-                    <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요." onkeypress="searchFunc()">
-                    <button class="search-btn" type="button" onclick="searchFunc()">
-                        <img src="/image/search_icon.png" alt="search_icon">
-                    </button>
+    <!--  -->
+    <div id="wrap">
+        <section class="main-page">
+            <div class="search-box">
+                <!-- onkeypress 말고 엔터키만 따로 지정해서 검색할 수 있게 설정 바꾸기 -->
+                <input type="text" class="search-txt" placeholder="검색어 입력" onkeypress="searchFunc()" />
+                <div class="img-box">
+                    <img src="/image/search_icon.png" alt="search_icon">
                 </div>
             </div>
+
             <br>
             <hr>
             <br>
 
-            <div id="main-auction">
+            <div class="main-auction">
                 <h1>경매 상품</h1>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 1</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 2</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 3</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 4</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 5</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 6</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 7</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 8</div>
+                        <div class="swiper-slide"><img src="/image/logo.png" alt="">Slide 9</div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <br>
-                <hr>
-                <br>
+            </div>
 
-                <div id="main-item">
-                    <section class="prod-list">
-                        <div class="container">
-                            <h1>일반 상품</h1>
-                            <div class="title">
-                                <br>
-                                <ul>
-                                    <li><a href="">전자제품</a></li>
-                                    <li><a href="">패션잡화</a></li>
-                                    <li><a href="">음식</a></li>
-                                    <li><a href="">기타등등</a></li>
-                                </ul>
+            <br>
+            <hr>
+            <br>
+
+            <div class="main-item">
+                <div class="prod-list">
+                    <div class="container">
+                        <h1>일반 상품</h1>
+                        <div class="title">
+                            <br>
+                            <ul>
+                                <li><a href="">전자제품</a></li>
+                                <li><a href="">패션잡화</a></li>
+                                <li><a href="">음식</a></li>
+                                <li><a href="">기타등등</a></li>
+                            </ul>
+                        </div>
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <div class="item-list">
+
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="/image/test.jpg" alt="">
+                                </div>
+                                <div class="card-txt">
+                                    <h2>상품이름</h2>
+                                    <p>가격</p>
+                                    <button>보러가기</button>
+                                </div>
                             </div>
 
-                            <br>
-                            <hr>
-                            <br>
-
-                            <div class="item-list">
-
-                                <div class="card">
-                                    <div class="img-box">
-                                        <img src="/image/logo.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h2>상품 이름</h2>
-                                        <p>가격</p>
-                                        <button>보러가기</button>
-                                    </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="/image/logo.png" alt="">
                                 </div>
-
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="/image/logo.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h2>상품 이름</h2>
-                                        <p>가격</p>
-                                        <button>보러가기</button>
-                                    </div>
+                                <div class="card-txt">
+                                    <h2>상품이름</h2>
+                                    <p>가격</p>
+                                    <button>보러가기</button>
                                 </div>
+                            </div>
 
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="/image/logo.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h2>상품 이름</h2>
-                                        <p>가격</p>
-                                        <button>보러가기</button>
-                                    </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="/image/logo.png" alt="">
                                 </div>
-
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="/image/logo.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h2>상품 이름</h2>
-                                        <p>가격</p>
-                                        <button>보러가기</button>
-                                    </div>
+                                <div class="card-txt">
+                                    <h2>상품이름</h2>
+                                    <p>가격</p>
+                                    <button>보러가기</button>
                                 </div>
+                            </div>
 
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="/image/logo.png" alt="">
+                                </div>
+                                <div class="card-txt">
+                                    <h2>상품이름</h2>
+                                    <p>가격</p>
+                                    <button>보러가기</button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="/image/logo.png" alt="">
+                                </div>
+                                <div class="card-txt">
+                                    <h2>상품이름</h2>
+                                    <p>가격</p>
+                                    <button>보러가기</button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="/image/logo.png" alt="">
+                                </div>
+                                <div class="card-txt">
+                                    <h2>상품이름</h2>
+                                    <p>가격</p>
+                                    <button>보러가기</button>
+                                </div>
                             </div>
 
                         </div>
-                    </section>
+                    </div>
                 </div>
-
             </div>
-    </main>
 
-    <!-- <footer>
-        <div class="inner">푸터</div>
-    </footer> -->
+        </section>
+    </div>
+    <!--  -->
+
+    <footer>
+        <div class="inner">
+            <div class="footer-top">
+                <ul>
+                    <li>회사소개</li>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                    <li>고객문의</li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <h4>Auction Chance</h4>
+                <ul class="company">
+                    <li>대표이사: Chance</li>
+                    <li>사업자등록번호: 012-34-56789</li>
+                    <li>통신판매업신고: 2023-서울마포-0000</li>
+                    <li>EMAIL: chance@auctionchance.co.kr</li>
+                    <li>주소: 서울시 마포구 염리동</li>
+                </ul>
+                <ul class="callcenter">
+                    <li>고객센터</li>
+                    <li>0000-0000</li>
+                </ul>
+                <ul class="sns">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -167,7 +246,6 @@
                 }
             }
         });
-
     </script>
 </body>
 

@@ -1,0 +1,246 @@
+/* 윤석찬 page: main page */
+/* 모바일 기준 -  480이하일 경우 ~480 */
+/* .main-page {
+    margin-top: 100px;
+} */
+header {
+    z-index: 10000000000;
+}
+/* search / 검색창 */
+.main-page .search {
+    display: flex;
+    justify-content: center;
+}
+
+.main-page .search-box {
+    height: 40px;
+    width: auto;
+    background: white;
+    border-radius: 40px;
+    padding: 10px;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.main-page .search-txt {
+    float: left;
+    border: none;
+    background: none;
+    outline: none;
+    color: #797979;
+    padding: 0;
+    /* line-height: 30px; */
+    width: 100%;
+}
+
+.main-page .img-box {
+    float: left;
+    display: flex;
+    align-items: center;
+    /* width: 40px;
+    height: 100%;
+    border: none; */
+    /* border-radius: 50%; */
+}
+
+.main-page .img-box img{
+    width: 2.5em;
+    height: 2.5em;
+}
+
+/* main-auction / 경매상품 */
+
+.main-auction {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-horizontal {
+    height: 300px;
+}
+
+.main-page .main-auction {
+    width: 100%;
+    height: 100%;
+}
+
+.main-page .main-auction .swiper {
+    width: 100%;
+    height: 400px;
+    /* z-index: -1000000000000000000000000000; */
+}
+
+.main-page .main-auction .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-page .main-auction .swiper-slide img {
+    display: block;
+    /* width: 50%;
+    height: 50%; */
+    object-fit: cover;
+
+}
+
+/* main-item / 일반 상품 */
+
+/* .main-item .prod-list {
+    padding-top: 70px;
+    padding-bottom: 70px;
+} */
+
+.main-item .prod-list .container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.main-item .prod-list .container .title ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.main-item .prod-list .container .title ul li {
+    display: inline;
+    /* margin-right: 30px; */
+    border: 1px solid green;
+    border-radius: 50px;
+    padding: 3px 10px;
+}
+
+.main-item .prod-list .container .title .ul .li a {
+    text-decoration: none;
+    color: #797979;
+}
+
+.main-item .prod-list .container .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: center;
+}
+
+.main-item .prod-list .container .item-list .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 350px;
+    width: 400px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 사진과 글을 위 아래로 붙이고 싶은데 여러가지 해결방법을 찾아 보다가 div.card에 새로 정렬 하고 양쪽 정렬을 줘서 해결함
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.main-item .prod-list .container .item-list .card .card-img {
+    width: 90%;
+    height: 90%;
+}
+
+.main-item .prod-list .container .item-list .card img {
+    width: 90%;
+    height: 90%;
+}
+
+.main-item .prod-list .container .item-list .card .card-txt {
+    /* flex-direction: column;
+    justify-content: flex-end; */
+    /* height: 10%; */
+    margin-bottom: 10px;
+}
+
+.main-item .prod-list .container .item-list .card .card-txt p {
+    font-size: 14px;
+}
+
+.main-item .prod-list .container .item-list .card .card-txt button {
+    background: green;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 10px;
+    transition: .5s ease;
+}
+
+a .main-item .prod-list .container .item-list .card .card-txt button:hover {
+    transition: .5s ease;
+    border: 2px solid green;
+    background: transparent;
+    color: black;
+}
+
+/* 반응형 분기점 */
+/* 480이하일 경우 ~480 */
+/* @media (max-width: 480px) {} */
+
+/* 반응형 분기점 */
+/* 모바일 / 480이하일 경우 */
+@media (max-width: 480px) {
+    .main-page .search-box {
+        max-width: 300px;
+    }
+
+    .main-item .prod-list .container .item-list .card {
+        width: 100%;
+    }
+
+}
+
+/* 모바일 / 768이하일 경우 480~768 */
+@media (min-width: 481px) and (max-width: 768px) {
+    .main-page .search-box {
+        max-width: 500px;
+    }
+
+    .main-item .prod-list .container .item-list {
+        justify-content: start;
+    }
+
+    .main-item .prod-list .container .item-list .card {
+        width: calc(50% - 20px); /* 카드의 여백을 고려한 너비 설정 */
+    }
+}
+
+/* 태블릿PC / 1024이하일 경우 768~1024 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-page .search-box {
+        max-width: 600px;
+    }
+
+    .main-item .prod-list .container .item-list {
+        justify-content: start;
+    }
+
+    .main-item .prod-list .container .item-list .card {
+        width: calc(33.33% - 20px); /* 세 개씩 배치 */
+    }
+}
+
+/* PC / 1025이상일 경우 */
+@media (min-width: 1025px) {
+    .main-page .search-box {
+        max-width: 800px;
+    }
+
+    .main-item .prod-list .container .item-list {
+        justify-content: start;
+    }
+
+    .main-item .prod-list .container .item-list .card {
+        width: calc(25% - 20px); /* 네 개씩 배치 */
+    }
+}
