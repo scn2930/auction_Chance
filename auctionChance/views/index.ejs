@@ -1,35 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
+
 <body>
+
     <header>
         <div class="inner">
             <div id="logo">
-                <a href="/"><img src="/image/logo.png" alt=""></a>
+                <a href="/"><img src="/image/logo.png" alt="logoImg"></a>
             </div>
             <nav>
-                
+
             </nav>
         </div>
     </header>
-    <div id="wrap">
-        <div id="search">
-            검색창
-        </div>
-        <div id="main-auction">
-            경매상품
-        </div>
-        <div id="main-item">
-            일반상품
-        </div>
-    </div>
-    <footer>
+
+    <main class="main-page">
+        <div id="wrap">
+
+            <div id="search">
+                <div class="search-box">
+                    <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요." onkeypress="searchFunc()">
+                    <button class="search-btn" type="button" onclick="searchFunc()">
+                        <img src="/image/search_icon.png" alt="search_icon">
+                    </button>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <div id="main-auction">
+                <h1>경매 상품</h1>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <br>
+                <hr>
+                <br>
+
+                <div id="main-item">
+                    <section class="prod-list">
+                        <div class="container">
+                            <h1>일반 상품</h1>
+                            <div class="title">
+                                <br>
+                                <ul>
+                                    <li><a href="">전자제품</a></li>
+                                    <li><a href="">패션잡화</a></li>
+                                    <li><a href="">음식</a></li>
+                                    <li><a href="">기타등등</a></li>
+                                </ul>
+                            </div>
+
+                            <br>
+                            <hr>
+                            <br>
+
+                            <div class="item-list">
+
+                                <div class="card">
+                                    <div class="img-box">
+                                        <img src="/image/logo.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h2>상품 이름</h2>
+                                        <p>가격</p>
+                                        <button>보러가기</button>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="img">
+                                        <img src="/image/logo.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h2>상품 이름</h2>
+                                        <p>가격</p>
+                                        <button>보러가기</button>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="img">
+                                        <img src="/image/logo.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h2>상품 이름</h2>
+                                        <p>가격</p>
+                                        <button>보러가기</button>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="img">
+                                        <img src="/image/logo.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h2>상품 이름</h2>
+                                        <p>가격</p>
+                                        <button>보러가기</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+    </main>
+
+    <!-- <footer>
         <div class="inner">푸터</div>
-    </footer>
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, // 기본 값은 3개
+            spaceBetween: 30,
+            centeredSlides: false, // 이거 true하면 1개지정해서 가운데 고정이라 원하는 갯수로 설정 힘듦
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                1: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2 // 왜 안되지... / centeredSlides: true 이거 때문이였음...
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }
+        });
+
+    </script>
 </body>
+
 </html>
