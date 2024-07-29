@@ -4,5 +4,11 @@ exports.index = (req,res) => {
 exports.item = (req,res) => {
     res.render('item');
 }
+exports.auction = (req,res) => {
+    res.render('auction');
+}
+exports.auctiondetail = (req,res) => {
+    res.render('auctiondetail');
+}
 
 

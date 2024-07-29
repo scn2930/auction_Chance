@@ -2,14 +2,127 @@
 #auction-detail {
     width: 100%;
     /* height수정예정, bgc없앨거임 */
-    height: 800px;
-    background-color: beige;
+    position: relative;
+}
+.detail-bg {
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+    background-color: rgb(0, 66, 0);
+    height: 300px;
+}
+.detail-inner {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.detail-inner>div {
+    margin: auto;
+}
+.auction-img>a>img {
+    width: 100%;
+    height: 100%;
+}   
+.auction-user {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.user-img {
+    background-color: hotpink;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.user-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.auction-text>div {
+    display: flex;
+    line-height: 1.5;
+}
+.auction-text>div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+.auction-text h4{
+    width: 70px;
+}
+/* .auction-text>p {
+    line-height: 1.8;
+}
+.auction-text>p:first-child {
+    font-weight: bold;
+} */
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+.btn-box>button {
+    border: 0;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+}
+.btn-box>button:first-child {
+    margin-bottom: 5px;
 }
 
 /* 반응형 분기점 */
-/* 480이하일 경우 */
-@media (max-width: 480px) {}
-/* 768이하일 경우 */
-@media (max-width: 768px) {}
-/* 769이상일 경우 */
-@media (min-width: 769px) {}
+@media (max-width: 480px) {
+    .detail-inner>div {
+        width: 300px;
+    }
+    .auction-img {
+        height: 300px;
+    }
+    .auction-user {
+        margin-top: 10px;
+    }
+    .user-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .detail-inner>div {
+        width: 350px;
+    }
+    .auction-img {
+        height: 350px;
+    }
+    .user-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .detail-inner>div {
+        width: 400px;
+    }
+    .auction-img {
+        height: 400px;
+    }
+    .user-img {
+        width: 45px;
+        height: 45px;
+    }
+}
+@media (min-width: 1025px) {
+    .detail-inner>div {
+        width: 450px;
+    }
+    .auction-img {
+        height: 450px;
+    }
+    .user-img {
+        width: 50px;
+        height: 50px;
+    }
+
+}
