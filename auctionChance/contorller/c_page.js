@@ -6,3 +6,8 @@ exports.item = (req,res) => {
 }
 
 
+
+// 최재혁
+exports.secondhand = (req, res) => {
+    res.render('secondhand');
+};
