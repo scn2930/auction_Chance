@@ -108,6 +108,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+        /* background-color: #31572C; */
 }
 
 header>.inner>#logo img {

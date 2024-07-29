@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* mobile ~ 480px */
+section{
+  width: 100%;
+  margin-top: 100px;
+  padding: 5%;
+  background-color: aqua;
+}
+.secondhand-wrap{
+  width: 100%;
+  background-color: beige;
+}
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+.secondhand-category::-webkit-scrollbar {
+  display: none;
+}
+.secondhand-category{
+  -ms-overflow-style: none;
+  /* 인터넷 익스플로러 */
+  scrollbar-width: none;
+  /* 파이어폭스 */
+}
+
+.secondhand-category{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  /* margin-bottom: 10px; */
+  padding: 0 15px;
+  overflow: scroll;
+  white-space: nowrap;
+  background-color: coral;
+}
+.secondhand-category li{
+  height: 30px;
+  margin-right: 15px;
+  padding: 0 5px;
+  font-size: 0.8rem;
+  line-height: 30px;
+  border-radius: 30px;
+  background-color: cornflowerblue;
+}
+.secondhand-category li:last-of-type{
+  margin-right: 0px;
+}
+
+
+.secondhand-list{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 3%;
+}
+.secondhand-list-item li{
+  width: 300px;
+  margin-bottom:  50px;
+}
+.secondhand-list-item span:first-of-type{
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.secondhand-list-item span:last-of-type {
+  font-size: 1.2rem;
+}
+
+#secondhandPopup{
+  display: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 100px;
+  left: 50%;
+  padding: 10%;
+  background-color: palegreen;
+}
+#secondhandPopup>div{
+  width: ;
+}
+#secondhandPopup .secondhand-popup-product-name{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+@media screen (min-width: 481px) {
+    /* .secondhand-list {
+      padding: 50px;
+
+    } */
+    .secondhand-list-item{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .secondhand-list-item li{
+      margin-bottom: 50px;
+    }
+  
+}
