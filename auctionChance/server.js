@@ -11,10 +11,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'static')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/',pageRouter)
+app.use('/', pageRouter)
 
 
-app.listen(PORT,() => {
+app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
 })
 
