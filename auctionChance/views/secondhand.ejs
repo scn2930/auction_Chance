@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/secondhand.css">
+  <title>중고거래</title>
+</head>
+<body>
+
+  <header>
+    <div class="inner">
+      <div id="logo">
+        <a href="/"><img src="/image/logo.png" alt=""></a>
+      </div>
+      <nav></nav>
+    </div>
+  </header>
+  
+  <div id="secondhandPopup" style="display: none;">
+    <div>
+      <img src="" alt="물품 이미지" class="secondhand-popup-product-img">
+    </div>
+    <span>
+      <img src="" alt="판매자 프로필 이미지">
+      <span>판매자 이름</span>
+    </span>
+    <p class="secondhand-popup-product-name"></p>
+    <p class="secondhand-popup-product-price"></p>
+    <p>상품설명</p>
+    <p>X</p>
+    <button type="button">채팅하기</button>
+  </div>
+  <section class="secondhand">
+    <div class="secondhand-wrap">
+      <ul class="secondhand-category">
+        <li>디지털 기기</li>
+        <li>가구 / 인테리어</li>
+        <li>패션 / 잡화</li>
+        <li>생활 가전</li>
+        <li>스포츠 / 게임</li>
+        <li>식품</li>
+        <li>상품권</li>
+        <li>잡화</li>
+      </ul>
+      <div class="secondhand-list">
+        <ul class="secondhand-list-item">
+          <li onclick="secondhandPopupFunc()">
+            <img src="/image/iphone15.jpeg" alt="물품 이미지">
+            <span class="secondhand-product">아이폰 15</span>
+            <span class="secondhand-price">1,000,000원</span>
+          </li>
+          <li onclick="secondhandPopupFunc()">
+            <img src="/image/iphone15.jpeg" alt="물품 이미지">
+            <span class="secondhand-product">아이폰 15</span>
+            <span class="secondhand-price">1,000,000원</span>
+          </li>
+          <li onclick="secondhandPopupFunc()">
+            <img src="/image/iphone15.jpeg" alt="물품 이미지">
+            <span class="secondhand-product">아이폰 15</span>
+            <span class="secondhand-price">1,000,000원</span>
+          </li>
+          <li onclick="secondhandPopupFunc()">
+            <img src="/image/iphone15.jpeg" alt="물품 이미지">
+            <span class="secondhand-product">아이폰 15</span>
+            <span class="secondhand-price">1,000,000원</span>
+          </li>
+          <li onclick="secondhandPopupFunc()">
+            <img src="/image/iphone15.jpeg" alt="물품 이미지">
+            <span class="secondhand-product">아이폰 15</span>
+            <span class="secondhand-price">1,000,000원</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer></footer>
+
+
+  <script>
+    function secondhandPopupFunc() {
+      const imgSrc = document.querySelector('.secondhand-list-item li img').src;
+      console.log(imgSrc);
+      const productName = document.querySelector('.secondhand-product').textContent;
+      console.log(productName);
+      const productPrice = document.querySelector('.secondhand-price').textContent;
+      console.log(productPrice);
+      document.querySelector('#secondhandPopup').style.display = 'block';
+      document.querySelector('.secondhand-popup-product-img').src = imgSrc;
+      document.querySelector('.secondhand-popup-product-name').innerText = productName;
+      document.querySelector('.secondhand-popup-product-price').innerText = productPrice;
+
+    };
+
+
+  </script>
+</body>
+</html>
