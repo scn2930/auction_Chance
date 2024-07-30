@@ -1,0 +1,310 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: aqua;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 0 0;
+}
+
+.edit-profile {
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.profile-details .info {
+    margin-bottom: 20px;
+    /* background-color: #f8f9fa; */
+}
+
+.profile-details .info input {
+    margin: 5px 0;
+}
+
+.map {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+.save-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.interest-item {
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+/* interests */
+/* 기본 스타일 */
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.interest-item {
+    width: 40px;
+    height: 10em;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.item-icon {
+    margin-right: 10px;
+}
+
+.item-icon .toggle-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: gray; /* 비활성화 색상 */
+}
+
+.item-icon .toggle-icon.active {
+    color: gold; /* 활성화된 상태의 색상 */
+}
+
+.item-icon .toggle-icon.inactive {
+    color: gray; /* 비활성화 상태의 색상 */
+}
+
+/* 미디어 쿼리 */
+
+/* 스마트폰: ~ 480px */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar ul li {
+        flex: 1;
+        margin: 0;
+    }
+
+    .sidebar ul li a {
+        padding: 10px;
+        text-align: center;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .interest-item {
+        width: 100%;
+    }
+}
+
+/* 스마트폰: 480px ~ 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .interest-item {
+        width: 100%;
+    }
+}
+
+/* 태블릿: 768px ~ 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .interest-item {
+        width: calc(50% - 20px);
+    }
+}
+
+/* PC: 1024px ~ 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .interest-item {
+        width: calc(33.333% - 20px);
+    }
+}
+
+/* PC: 1440px ~ */
+@media (min-width: 1441px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .interest-item {
+        width: calc(33.333% - 20px);
+    }
+}  
+
+/* 스마트폰: ~480px */
+@media (max-width: 480px) {
+    .interest-item {
+        width: calc(50% - 20px);
+    }
+}
+
+/* 스마트폰: 480px ~ 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .interest-item {
+        width: calc(50% - 20px);
+    }
+}
+
+/* 태블릿 및 PC: 768px 이상 */
+@media (min-width: 769px) {
+    .interest-item {
+        width: calc(33.333% - 20px);
+    }
+} 

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/auctiondetail.css" />
+        <script src="https://kit.fontawesome.com/1b7922c83d.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <div class="inner">
+                <h1 id="logo">
+                    <a href="/"><img src="/image/logo.png" alt=""></a>
+                </h1>
+                <div>
+                    <div class="header-top">
+                        <ul>
+                            <li>로그인</li>
+                            <li>회원가입</li>
+                        </ul>
+                    </div>
+                    <div class="header-bottom">
+                        <nav>
+                            <ul>
+                                <li><a href="">경매상품</a></li>
+                                <li><a href="">중고상품</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-header">
+                        <div class="nav-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-bars" onclick="navOpen()"></i>
+                        </div>
+                        <nav>
+                            <div><i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i></div>
+                            <ul>
+                                <li><a href="">경매상품</a></li>
+                                <li><a href="">중고상품</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="wrap">
+            <div id="auction-detail">
+                <div class="detail-bg"></div>
+                <div class="detail-inner">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide auction-img">
+                                <a href=""><img src="/image/test.jpg" alt="" /></a>
+                            </div>
+                            <div class="swiper-slide auction-img">
+                                <a href=""><img src="/image/test.jpg" alt="" /></a>
+                            </div>
+                            <div class="swiper-slide auction-img">
+                                <a href=""><img src="/image/test.jpg" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="auction-user">
+                        <div class="user-img">
+                            <a href="#"
+                                ><img src="/image/test2.jpg" alt=""
+                            /></a>
+                        </div>
+                        <div class="user-name">user사진,닉네임 불러오기</div>
+                    </div>
+                    <div class="auction-text">
+                        <div>
+                            <h4>상품명</h4>
+                            <p>Lorem ipsum, dolor si</p>
+                        </div>
+                        <div>
+                            <h4>시작가</h4>
+                            <p>100,000~</p>
+                        </div>
+                        <div>
+                            <h4>기간</h4>
+                            <p>07.28 ~ 08.02</p>
+                        </div>
+                        <div>
+                            <h4>상품설명</h4>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Doloremque ipsa quam, esse,
+                                hic quas eaque a facere accusamus, fugiat
+                                dolorum voluptates eos ea id ex! Cum dolore
+                                nostrum aut odit?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="chat-btn" onclick="chatFunc()">입찰하기</button>
+                        <button class="chat-btn" onclick="chatFunc()">1:1문의</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="inner">
+                <div class="footer-top">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>이용약관</li>
+                        <li>개인정보처리방침</li>
+                        <li>고객문의</li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <h4>Auction Chance</h4>
+                    <ul class="company">
+                        <li>대표이사: Chance</li>
+                        <li>사업자등록번호: 012-34-56789</li>
+                        <li>통신판매업신고: 2023-서울마포-0000</li>
+                        <li>EMAIL: chance@auctionchance.co.kr</li>
+                        <li>주소: 서울시 마포구 염리동</li>
+                    </ul>
+                    <ul class="callcenter">
+                        <li>고객센터</li>
+                        <li>0000-0000</li>
+                    </ul>
+                    <ul class="sns">
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-youtube"></i></li>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="fix-icon chat-icon"><i class="fa-solid fa-comment"></i></div>
+        <div class="modal-bg"></div>
+            <div class="chat-view">
+                <i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i>
+                <h4>채팅</h4>
+                <div class="chat-room">
+                    <div class="user-img">
+                        <img src="/image/test2.jpg" alt="">
+                    </div>
+                    <div class="chat-main">
+                        <div class="chat-text">
+                            <div class="user-name">
+                                <p>user1</p>
+                            </div>
+                            <div class="message">
+                                <p>아ㅏㅏㅏ아아아ㅏ아아아아아</p>
+                            </div>
+                        </div>
+                        <div class="chat-info">
+                            <div class="chat-date">
+                                <p>오전 1:25</p>
+                            </div>
+                            <div class="chat-check">
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-room">
+                    <div class="user-img">
+                        <img src="/image/test2.jpg" alt="">
+                    </div>
+                    <div class="chat-main">
+                        <div class="chat-text">
+                            <div class="user-name">
+                                <p>user2</p>
+                            </div>
+                            <div class="message">
+                                <p>아ㅏㅏㅏ아아아ㅏ아아아아아</p>
+                            </div>
+                        </div>
+                        <div class="chat-info">
+                            <div class="chat-date">
+                                <p>오전 1:25</p>
+                            </div>
+                            <div class="chat-check">
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-top">
+                    <div class="former-btn" onclick="closeBtn()"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="chat-member">
+                        <div class="user-img">
+                            <img src="/image/test2.jpg" alt="">
+                        </div>
+                        <div class="user-name">
+                            <p>user1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-body">
+    
+                </div>
+                <form class="chat-input">
+                    <textarea  class="area">
+                    </textarea>
+                    <div>
+                        <div>
+                            <label for="file">
+                                <i class="fa-regular fa-file-image"><input type="file" id="file"></i>
+                            </label>
+                            <div class="emoticon">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                        <button class="send-btn"><i class="fa-regular fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        <script src="/js/auctiondetail.js"></script>
+        <script src="/js/script.js"></script>
+    </body>
+</html>
