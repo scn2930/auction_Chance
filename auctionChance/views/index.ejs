@@ -27,21 +27,21 @@
                 <div class="header-bottom">
                     <nav>
                         <ul>
-                            <li><a href="">경매상품</a></li>
-                            <li><a href="">중고상품</a></li>
+                            <li><a href="/auction">경매상품</a></li>
+                            <li><a href="/secondhand">중고상품</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="mobile-header">
                     <div class="nav-icon">
                         <i class="fa-solid fa-user"></i>
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bars" onclick="navOpen()"></i>
                     </div>
                     <nav>
-                        <div><i class="fa-solid fa-xmark close-btn"></i></div>
+                        <div><i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i></div>
                         <ul>
-                            <li><a href="">경매상품</a></li>
-                            <li><a href="">중고상품</a></li>
+                            <li><a href="/auction">경매상품</a></li>
+                            <li><a href="/secondhand">중고상품</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -54,7 +54,7 @@
         <section class="main-page">
             <div class="search-box">
                 <!-- onkeypress 말고 엔터키만 따로 지정해서 검색할 수 있게 설정 바꾸기 -->
-                <input type="text" class="search-txt" placeholder="검색어 입력" onkeypress="searchFunc()" />
+                <input type="search" class="search-txt" placeholder="검색어 입력" onChange={onInputSearch} onkeyup={onSubmitSearch} />
                 <div class="img-box">
                     <img src="/image/search_icon.png" alt="search_icon">
                 </div>
@@ -207,18 +207,104 @@
                     <li>0000-0000</li>
                 </ul>
                 <ul class="sns">
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-twitter"></i></li>
-                    <li><i class="fa-brands fa-youtube"></i></li>
-                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></i></li>
+                    <li><a href="https://x.com/?lang=ko" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </footer>
 
+    <div class="fix-icon chat-icon"><i class="fa-solid fa-comment"></i></div>
+    <div class="modal-bg"></div>
+    <div class="chat-view">
+        <div><i class="fa-solid fa-xmark close-btn" onclick="closeBtn()"></i></div>
+        <h4>채팅</h4>
+        <div class="chat-room">
+            <div class="user-img">
+                <img src="/image/test2.jpg" alt="">
+            </div>
+            <div class="chat-main">
+                <div class="chat-text">
+                    <div class="user-name">
+                        <p>user1</p>
+                    </div>
+                    <div class="message">
+                        <p>아ㅏㅏㅏ아아아ㅏ아아아아아</p>
+                    </div>
+                </div>
+                <div class="chat-info">
+                    <div class="chat-date">
+                        <p>오전 1:25</p>
+                    </div>
+                    <div class="chat-check">
+                        <p>1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-room">
+            <div class="user-img">
+                <img src="/image/test2.jpg" alt="">
+            </div>
+            <div class="chat-main">
+                <div class="chat-text">
+                    <div class="user-name">
+                        <p>user2</p>
+                    </div>
+                    <div class="message">
+                        <p>아ㅏㅏㅏ아아아ㅏ아아아아아</p>
+                    </div>
+                </div>
+                <div class="chat-info">
+                    <div class="chat-date">
+                        <p>오전 1:25</p>
+                    </div>
+                    <div class="chat-check">
+                        <p>1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-top">
+            <div class="former-btn"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="chat-member">
+                <div class="user-img">
+                    <img src="/image/test2.jpg" alt="">
+                </div>
+                <div class="user-name">
+                    <p>user1</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-body">
+        </div>
+        <form class="chat-input">
+            <textarea class="area">
+                    </textarea>
+            <div>
+                <div>
+                    <label for="file">
+                        <i class="fa-regular fa-file-image"><input type="file" id="file"></i>
+                    </label>
+                    <div class="emoticon">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+                <button class="send-btn"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        let swiper = new Swiper(".mySwiper", {
             slidesPerView: 1, // 기본 값은 3개
             spaceBetween: 30,
             centeredSlides: false, // 이거 true하면 1개지정해서 가운데 고정이라 원하는 갯수로 설정 힘듦
@@ -246,6 +332,12 @@
                 }
             }
         });
+
+        const onSubmitSearch = (e) => {
+            if (e.key === "Enter") {
+                // 키를 눌렀을 때 동작할 코드를 넣으면 됨
+            }
+        };
     </script>
 </body>
 
