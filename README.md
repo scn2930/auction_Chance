@@ -130,7 +130,7 @@ http://43.203.118.59
 <br>
 
 ### 경매 종료
-<a><img src="https://github.com/user-attachments/assets/5ec6dc9a-72a0-405e-b3b6-c22da8fafb31" width="500" alt="경매 종료"></a>
+<a><img src="https://github.com/user-attachments/assets/5ec6dc9a-72a0-405e-b3b6-c22da8fafb31" width="400" alt="경매 종료"></a>
 
 <br>
 
