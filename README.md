@@ -1,0 +1,130 @@
+# 🧑‍⚖️ 중고거래 + 실시간 채팅을 이용한 경매 서비스
+
+<a href="http://43.203.118.59" target="_blank"><img src="https://github.com/user-attachments/assets/62576e21-f0d1-4d46-87ca-2c7222049010" width="150" height="150"></a>
+
+<br>
+
+## ❓ 프로젝트 소개
+- 높아지는 물가로 인해 중고 거래가 활발해지는 점에 주목했습니다.
+- 단순한 재판매를 넘어 경매 시스템을 도입하여 사용자 만족도를 높이고 차별화된 경험을 제공합니다.
+
+<br>
+
+## 💻 개발환경
+- 기술 스택 : HTML, CSS, JavaScript, Node.js, MySQL
+- 버전 관리 : GitHub
+- 툴 : Slack, Figma
+- 배포 : AWS
+
+<br>
+
+## 👤 팀원 소개
+| 🦖 최재혁(PL) | 🐬 주승현 | 🐥 한송이 | 🦄 윤석찬 |
+| ------------ | ------ | ------ | ------ |
+| <a href="https://github.com/scn2930" target="_blank"><img src="https://github.com/user-attachments/assets/611de94d-0c84-47b7-b396-1a8ad2793544" width="150" height="150"></a> | <a href="https://github.com/bsyjsh88" target="_blank"><img src="https://github.com/user-attachments/assets/b4ffd7b0-08ed-4448-8914-d9072b346853" width="150" height="150"></a> | <a href="https://github.com/songyiiii" target="_blank"><img src="https://github.com/user-attachments/assets/30ad17c1-da2b-4565-ae70-0f7b5dd83195" width="150" height="150"></a> | <a href="https://github.com/YoonSeokChan98" target="_blank"><img src="https://github.com/user-attachments/assets/6f044736-e90e-4f9d-bc2f-e41cea9d8588" width="150" height="150"></a> |
+
+<br>
+
+## 📅 프로젝트 기간
+- 전체 프로젝트 일정 : 2024-07-25 ~ 2024-08-14
+- UI 설계 : 2024-07-25 ~ 2024-07-26
+- 기능 구현 : 2024-07-27 ~ 2024-08-13
+- 발표 및 시연 : 2024-08-14
+
+<br>
+  
+## 🔗 링크
+http://43.203.118.59
+
+<br>
+
+## 💻 구현 사항
+
+### 회원가입
+<a><img src="https://github.com/user-attachments/assets/bd9f579f-3afb-47fc-9887-ddc316443021" alt="회원가입"></a>
+
+<br>
+
+- 유효성 검사를 통해 회원가입 
+
+<br>
+
+### 로그인
+<a><img src="https://github.com/user-attachments/assets/6557245c-39a9-49b7-a70f-34773dce57b9" alt="로그인"></a>
+
+<br>
+
+- 입력된 이메일과 비밀번호를 서버에 전달해 유효성을 확인하고, 성공 시 사용자 정보를 로컬 및 세션 스토리지에 저장
+
+<br>
+
+### 메인페이지
+
+<a><img src="https://github.com/user-attachments/assets/633a6880-8e92-4981-bb0d-49338dfe7ca7" alt="메인"></a>
+
+<br>
+
+- 경매예정 상품과 경매상품, 중고상품을 제한된 갯수 내에서 출력
+
+<br>
+
+### 상품등록
+<a><img src="https://github.com/user-attachments/assets/7126d97f-e2c7-4875-8bcb-cd158b78bd8c" alt="상품등록"></a>
+
+<br>
+
+- 상품 정보와 이미지를 FormData로 서버에 전송하며, AWS S3에 이미지를 저장하고 데이터베이스에 상품 정보를 저장
+
+<br>
+
+### 쪽지발송
+<a><img src="https://github.com/user-attachments/assets/50ee261f-8436-4902-9bbb-306fc508d74b" alt="쪽지 발송"></a>
+
+<br>
+
+- 중고상품 상세페이지의 1:1 문의 버튼 클릭시 상대방에게 쪽지를 보낼수있는 팝업창이 뜸
+- 쪽지를 작성하고 전송하면, 쪽지 데이터가 데이터베이스에 저장
+
+<br>
+
+### 쪽지 확인 및 답장
+<a><img src="https://github.com/user-attachments/assets/97427fc8-16df-40f0-a905-4046fbc4616f" alt="쪽지 확인 및 답장"></a>
+
+<br>
+
+- 받은 쪽지는 미니 프로필에서 확인 가능
+- 모달 형태로 답장 폼을 띄우며 답장하기 버튼을 클릭하면 답장을 보낼수있는 쪽지 팝업창이 뜸
+
+<br>
+
+### 검색
+<a><img src="https://github.com/user-attachments/assets/c9b1fedb-ca4b-42c8-97d6-a5201f9acfb9" alt="검색"></a>
+
+<br>
+
+- 검색 상품을 중고와 경매 동시에 검색 가능
+
+<br>
+
+### 경매
+<a><img src="https://github.com/user-attachments/assets/c0f06851-d0bd-42db-b7c2-61fd73f153ee" alt="경매 상품"></a>
+
+<br>
+
+- 입찰하기 버튼을 클릭하면 채팅방으로 입장
+
+<br>
+
+<a><img src="https://github.com/user-attachments/assets/b8256d1b-241f-4e68-9ce1-3aee7be86ca2" width="700" alt="경매 입장"></a>
+<a><img src="https://github.com/user-attachments/assets/8ba803e4-6ddc-4147-8b71-78b2e3a9a630" width="700" alt="경매 진행"></a>
+
+<br>
+
+- Socket.io가 적용된 채팅방에 입장해 실시간으로 입찰 금액을 갱신하며, 클라이언트와 데이터베이스에 반영
+- 판매자는 ‘경매 종료’ 버튼을, 구매자는 입찰 인터페이스를 볼 수 있음
+- 판매자가 입찰받은 금액에 경매종료를 시키면 입찰가와 입찰자가 채팅창에 표시 된 후 채팅이 끝나게됨
+
+
+
+
+
