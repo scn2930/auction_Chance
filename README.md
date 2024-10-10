@@ -120,8 +120,7 @@ http://43.203.118.59
 <br>
 
 ### 경매 입장 및 진행
-<a><img src="https://github.com/user-attachments/assets/b8256d1b-241f-4e68-9ce1-3aee7be86ca2" width="700" alt="경매 입장"></a>
-<a><img src="https://github.com/user-attachments/assets/8ba803e4-6ddc-4147-8b71-78b2e3a9a630" width="700" alt="경매 진행"></a>
+<a><img src="https://github.com/user-attachments/assets/69814f6b-5d0e-4ec7-a1ff-9db6a6467735" width="700" alt="경매 입장"></a>
 
 <br>
 
